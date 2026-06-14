@@ -1,4 +1,4 @@
-# Knowledge-Informed Multifidelity Modeling
+# Multi-Fidelity Neural Process Case Studies
 
 This repository contains four benchmark cases for knowledge-informed multifidelity neural discrepancy learning. The code is organized by adding a physics-loss switch so each method can be tested **with** or **without** physics loss.
 
