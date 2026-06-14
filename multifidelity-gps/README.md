@@ -3,9 +3,7 @@
 This repository contains multi-fidelity Gaussian Process experiments comparing two methods:
 
 1. **Standard GP co-kriging** using the autoregressive form
-   \[
-   y_{HF}(t) = \rho y_{LF}(t) + \delta(t)
-   \]
+$y_{HF}(t) = \rho y_{LF}(t) + \delta(t)$
 2. **Joint GP co-kriging** using an augmented input space with fidelity level.
 
 The project combines four cases with different high-fidelity and low-fidelity functions while keeping the original modeling workflow intact.
