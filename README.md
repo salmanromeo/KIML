@@ -124,7 +124,7 @@ Each benchmark contains unique LF and HF relationships designed to stress-test m
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/knowledge-informed-multifidelity.git
+git clone https://github.com/salmanromeo/KIML.git
 
 cd knowledge-informed-multifidelity
 ```
