@@ -174,7 +174,7 @@ python main.py --no-plots
 ## Repository Structure
 
 ```text
-knowledge-informed-multifidelity/
+...../
 │
 ├── main.py
 ├── requirements.txt
