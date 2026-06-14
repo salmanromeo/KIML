@@ -6,7 +6,7 @@ This repository contains multi-fidelity Gaussian Process experiments comparing t
 $y_{HF}(t) = \rho y_{LF}(t) + \delta(t)$
 2. **Joint GP co-kriging** using an augmented input space with fidelity level.
 
-The project combines four cases with different high-fidelity and low-fidelity functions while keeping the original modeling workflow intact.
+The project combines four cases with different high-fidelity and low-fidelity functions.
 
 ## Cases
 
@@ -20,7 +20,7 @@ The project combines four cases with different high-fidelity and low-fidelity fu
 ## Project Structure
 
 ```text
-multifidelity-gp-combined/
+multifidelity-gps/
 ├── main.py
 ├── README.md
 ├── requirements.txt
@@ -34,11 +34,6 @@ multifidelity-gp-combined/
 │       ├── models.py
 │       ├── plotting.py
 │       └── run.py
-├── original_cases/
-│   ├── case1_linear_scaling_original.py
-│   ├── case2_moderate_nonlinearities_original.py
-│   ├── case3_complex_fidelity_original.py
-│   └── case4_divergent_dynamics_original.py
 ├── figures/
 └── results/
 ```
@@ -107,4 +102,4 @@ results/summary_results.csv
 
 ## Notes
 
-The refactored code avoids repeating the same GP routines across every case. The HF and LF equations are stored separately in `src/multifidelity_gp/cases.py`, while the original scripts are preserved in `original_cases/` for traceability.
+The HF and LF equations are stored separately in `src/multifidelity_gp/cases.py`.
