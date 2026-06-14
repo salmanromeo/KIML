@@ -1,6 +1,6 @@
-# Knowledge-Informed Multifidelity Modeling with Physics Toggle
+# Knowledge-Informed Multifidelity Modeling
 
-This repository contains four benchmark cases for knowledge-informed multifidelity neural discrepancy learning. The code keeps the original modeling workflow from the uploaded scripts, but organizes it as a GitHub-ready project and adds a physics-loss switch so each method can be tested **with** or **without** physics loss.
+This repository contains four benchmark cases for knowledge-informed multifidelity neural discrepancy learning. The code is organized by adding a physics-loss switch so each method can be tested **with** or **without** physics loss.
 
 The main idea is to compare whether the ansatz-guided discrepancy representation can work with data loss alone, rather than requiring a physics residual every time.
 
@@ -30,7 +30,7 @@ Each method supports:
 ## Project structure
 
 ```text
-ki-multifidelity-physics-toggle/
+multifidelity-nns/
 ├── main.py
 ├── README.md
 ├── requirements.txt
@@ -43,11 +43,6 @@ ki-multifidelity-physics-toggle/
 │       ├── physics.py
 │       ├── plotting.py
 │       └── run.py
-├── original_scripts/
-│   ├── case1_original.py
-│   ├── case2_original.py
-│   ├── case3_original.py
-│   └── case4_original.py
 ├── figures/
 └── results/
 ```
@@ -103,13 +98,13 @@ python main.py --no-plots
 In Spyder, open `main.py` and run it normally. To pass arguments in the console, use:
 
 ```python
-%runfile C:/path/to/ki-multifidelity-physics-toggle/main.py --args --compare-physics
+%runfile C:/path/to/multifidelity-nns/main.py --args --compare-physics
 ```
 
 or:
 
 ```python
-%runfile C:/path/to/ki-multifidelity-physics-toggle/main.py --args --physics false --methods ansatz
+%runfile C:/path/to/multifidelity-nns/main.py --args --physics false --methods ansatz
 ```
 
 ## Outputs
@@ -121,12 +116,4 @@ Generated outputs are saved to:
 
 ## Notes
 
-The physics residual is the same form used in the original scripts:
-
-```text
-y'' + 400 y - 400 t
-```
-
 When physics is disabled, the deterministic models optimize only the HF data mismatch. For the Bayesian ansatz model, the physics likelihood term is removed and inference is driven by the data likelihood and priors.
-
-The original uploaded scripts are kept in `original_scripts/` for traceability.
