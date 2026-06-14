@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multifidelity-gp"
+version = "0.1.0"
+description = "Multi-fidelity Gaussian Process case studies comparing standard and joint GP co-kriging."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "scikit-learn",
+    "pandas",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
